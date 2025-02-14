@@ -18,6 +18,20 @@ print()
 print(f"soma: {soma}")
 print(f"media: {media}")
 print(f"Produto: {produto}")
-print(f"Maior numero: {maior_numero}")
-print(f"Menor numero:{menor_numero}")
+print()
+
+
+
+if maior_numero == menor_numero:
+    print("Os numeros são iguais")
+
+else:
+    print(f"Maior numero: {maior_numero}")
+    print(f"Menor numero: {menor_numero}")
+
+
+
+
+
+
 
