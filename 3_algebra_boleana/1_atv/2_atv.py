@@ -1,12 +1,12 @@
 import os 
 os.system ("clear")
-
+#2 - Entrada de dados
 n1 = int(input("Digite o primeiro numero: "))
 n2 = int(input("Digite o segundo numero: "))
 print()
 import os 
 os.system ("clear")
-
+#Saida de dados
 print(f"Numeros informados: {n1} / {n2}")
 print()
 maior_numero = max(n1,n2)
