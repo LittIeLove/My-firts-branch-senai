@@ -5,15 +5,26 @@ print("""
 1 - A vista
 2 - parcelado
 """)
+
+
+if valor == 0:
+    print("Valor não pode ser cobrado!")
+
 forma = int(input("escolha a forma de pagamento: "))
 os.system ("clear")
-if forma == 1:
+if forma > 0 and forma < 2:
     debito = "Debito"
     debitod = valor * 0.1
     valorff = valor - debitod
 
 else:
-    credito = ("Credito")
+    print()
+
+if forma == 2:
+    credito = "Credito"
+
+     
+     
 
 match forma:
     case 1:
@@ -35,6 +46,8 @@ match forma:
         print(f"Total a prazo: {valor}")
     case _:
         print("Forma invalida")
+
+
 
 
 
