@@ -1,6 +1,7 @@
 import os
 os.system ("clear")
 valor = float(input("Digite o valor do produto: "))
+
 print("""
 1 - A vista
 2 - parcelado
