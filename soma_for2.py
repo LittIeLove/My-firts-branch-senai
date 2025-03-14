@@ -10,6 +10,3 @@ for i in range (1,6):
 
 os.system ("clear || cls")
 print(f"A soma de todos os numeros é = {soma}")
-
-
-
