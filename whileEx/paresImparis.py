@@ -26,6 +26,8 @@ while True:
 if par == 0 and impar == 0:
     print("Total = (0)\nEncerrando...")
     sleep(2)
+    os.system ("clear || cls")
+    print("Obrigado por utilizar.")
     exit()
 
 print("Resultados:")
