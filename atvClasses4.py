@@ -15,13 +15,13 @@ QUANTIDADE_DE_CLIENTE = 2
 
 print("Informe os dados do usuario: ")
 
-for i in range(QUANTIDADE_DE_CLIENTES):
+for i in range(QUANTIDADE_DE_CLIENTE):
     cliente = Cliente(
         nome = input("Nome: "),
         email = input("Email: "),
         telefone= input("Telefone: ")
     )
-    lista_clentes.append(cliente)
+    lista_clientes.append(cliente)
 
 print("Exibindo dados...")
 
