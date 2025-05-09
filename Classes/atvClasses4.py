@@ -30,3 +30,17 @@ for cliente in lista_clientes:
         print(f"Email:{cliente.email} ")
         print(f"Telefone: {cliente.telefone} ")
         print()
+
+#Texto que você quer salvar
+
+print("Salvando os dados dos clientes =")
+nome_arquivo = "dados_cliente.txt"
+
+with open (nome_arquivo, "a") as arquivo:
+     for cliente in lista_clientes:
+          arquivo.write(f"{cliente.nome}, {cliente.email}, {cliente.telefone}\n")
+          
+
+#Abre o arquivo (ou cria se não existir) no modo de escrita ("w")
+
+print("O texto foi salvo com sucesso no arquivo meu_arquivo.txt")
