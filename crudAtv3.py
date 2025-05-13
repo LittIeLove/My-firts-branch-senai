@@ -13,6 +13,7 @@ class Ler_livro:
     categoria: str
     preco: float
     def ler_dados_catalogo(self):
+
         
 
 
@@ -24,6 +25,8 @@ for i in range (QUANTIDADE_LIVROS):
         input("Categoria"),
         input("Preço: ")
     )
+    liv
+
     
 
 
