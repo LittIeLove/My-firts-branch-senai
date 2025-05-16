@@ -29,25 +29,26 @@ def mostrar_funcionarios(lista):
         return
     print("\n= Lista de funcionários =")
     for funcionario in lista_funcionarios:
-        print(f"- Nome: {funcionario.nome}, Data de admissão: {funcionario.data_admissao}, CPF: {funcionario.cpf}, Função: {funcionario.funcao}")
+        print(f"- Nome: {funcionario.nome}\nData de admissão: {funcionario.data_admissao}\nCPF: {funcionario.cpf}\nFunção: {funcionario.funcao}\n")
 
-def atualizar_funcionario(lista):
+def atualizar_funcionario_com_index(lista):
     if not lista:
         print("\nA lista está vazia")
         return
     mostrar_funcionarios(lista)
     nome_antigo = input("Digite o nome do funcionário que deseja atualizar: ")
-    for funcionario in lista_funcionarios:
-        if funcionario.nome == nome_antigo:
-            funcionario.nome = input("Digite o novo nome: ")
-            funcionario.data_admissao = input("Digite a nova data de admissão: ")
-            funcionario.cpf = input("Digite o novo cpf: ")
-            funcionario.funcao = input("Digite a nova função: ")
-            print(f"\n{funcionario.nome} atualizado com sucesso.")
-            return
-        else:
-            print(f"\nFuncionário {nome_antigo} não encontrado.")
-            return
+    try:
+        # Encontra o índice do primeiro funcionário com o nome antigo
+        indice = [funcionario.nome for funcionario in lista].index(nome_antigo)
+        funcionario = lista[indice]  # Acessa o funcionário usando o índice
+
+        funcionario.nome = input("Digite o novo nome: ")
+        funcionario.data_admissao = input("Digite a nova data de admissão: ")
+        funcionario.cpf = input("Digite o novo cpf: ")
+        funcionario.funcao = input("Digite a nova função: ")
+        print(f"\n{funcionario.nome} atualizado com sucesso.")
+    except ValueError:
+        print(f"\nFuncionário {nome_antigo} não encontrado.")
     
 
 def excluir_funcionario(lista):
@@ -82,7 +83,7 @@ def painel():
                     mostrar_funcionarios(lista_funcionarios)
                 case 3:
                     os.system ("clear || cls")
-                    atualizar_funcionario(lista_funcionarios)
+                    atualizar_funcionario_com_index(lista_funcionarios)
                 case 4:
                     os.system ("clear || cls")
                     excluir_funcionario(lista_funcionarios)
